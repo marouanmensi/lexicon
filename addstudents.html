@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    <script src="assets/js/table.js"></script>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aclonica">
+    <link rel="stylesheet" href="assets/css/Side-By-Side-Section.css">
+    <link rel="stylesheet" href="assets/css/best-carousel-slide.css">
+    <link rel="stylesheet" href="assets/css/Footer-Clean.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
+    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Document</title>
+</head>
+
+
+
+<body ng-controller="AppCtrl">
+    <div class="brands"></div>
+    <nav class="navbar navbar-light navbar-expand-md" data-aos="zoom-in" style="background-color:rgba(200, 100, 0, 0.2);">
+        <div class="container-fluid">
+
+            <a href="index.html" class="navbar-brand">
+                <img src="./assets/img/logo.png" style="margin: 0;padding :0 ;top: 0;height: 65px;width: auto;">
+            </a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
+                <span class="sr-only"></span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" href="lessons.html" style="color:rgb(0,0,0);">Lessons</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link active" href="schedule.html" style="color:rgb(0,0,0);">Schedule</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" href="projects.html" style="color:rgb(0,0,0);">Projects</a>
+                    </li>
+                </ul>
+                <button class="btn btn-danger" type="button" onclick="document.getElementById('myBtn').style.display='block'">
+                    <i class="fa fa-sign-in">Sign In</i>
+                </button>
+            </div>
+        </div>
+    </nav>
+   
+    <div id="add-students">
+       
+          
+            <div class="container-fluid">
+                  
+                  
+                <div class="row justify-content-center">
+                        
+                    <table class=" col-8" id="student">
+                        <thead>
+                            <tr id="table-head">
+                                <th>&nbsp;&nbsp;&nbsp;</th>
+                                <th>ID</th>
+                                <th>User Name</th>
+                                <th>Password</th>
+                                <th>Email</th>
+                                <th>Phone Number</th>
+                                <th>Class Name</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="student in students" ng-class="$odd ? 'odd' : 'even'">
+                                <td>&nbsp;&nbsp;&nbsp;</td>
+                                <td>{{$index+1}}</td>
+                                <td>{{student.username}}</td>
+                                <td>{{student.password}}</td>
+                                <td>{{student.email}}</td>
+                                <td>{{student.phonenumber}}</td>
+                                <td>{{student.classname}}</td>
+                                <td>
+                                    <input id="delete" type="button" value="Remove" class="btn btn-primary" ng-click="removeRow($index)" />
+                                </td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class=" col-8" id="addbtn">
+                        <button ng-click="showNewContactForm()" class="btn btn-danger">Add New Student</button>
+
+                        <form ng-show="addNewStudent">
+                            <label class="col-4" for=""> User Name:</label>
+                            <input type="text" name="username" ng-model="username" />
+                            <br>
+                            <label class="col-4" for="">Password:</label>
+                            <input type="text" name="password" ng-model="password" />
+                            <br>
+                            <label class="col-4" for="">Email:</label>
+                            <input type="text" name="email" ng-model="email" />
+                            <br>
+                            <label class="col-4" for="">Phone Number:</label>
+                            <input type="text" name="phonenumber" ng-model="phonenumber" />
+                            <br>
+                            <label class="col-4" for="">Class Name:</label>
+                            <br>
+                            <select class="col-3" name="couse" ng-model="classname">
+                                <option value="">--Choose a class--</option>
+                                <option value="Java English">Java English</option>
+                                <option value="Java Swedish">Java Swedish</option>
+                                <option value=".NET English">.NET English</option>
+                                <option value=".NET Swedish">.NET Swedish</option>
+                            </select>
+
+                            <button id="btnadd" class="col-4 btn  btn-success" ng-click="add()">Add</button>
+                            <button class="col-4 btn btn-warning" ng-click="addNewStudent = false">Cancel</button>
+
+
+                        </form>
+                    </div>
+
+
+
+
+                </div>
+            
+        </div>
+    </div>
+
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-animation.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+    <script src="assets/js/login.js"></script>
+
+</body>
+
+
+</html>

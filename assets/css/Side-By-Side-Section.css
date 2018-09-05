@@ -1,0 +1,82 @@
+@media (min-width: 576px) {
+  .psd-left1:after {
+    border:2px solid rgb(128,128,128);
+    background-color:rgb(220,53,69);
+    border-radius:20%;
+    content:"";
+    height:20px;
+    position:absolute;
+    left:-10px;
+    top:50px;
+    width:20px;
+    z-index:1;
+  }
+}
+
+@media (min-width: 576px) {
+  .psd-right1:after {
+    border:3px solid grey;
+    background-color:#dc3545;
+    border-radius:20%;
+    content:"";
+    height:20px;
+    position:absolute;
+    right:-10px;
+    top:49px;
+    width:20px;
+    z-index:1;
+  }
+}
+
+@media (min-width: 576px) {
+  .psd-left2:after {
+    border:3px solid grey;
+    background-color:#dc3545;
+    border-radius:20%;
+    content:"";
+    height:20px;
+    position:absolute;
+    left:-10px;
+    top:48px;
+    width:20px;
+    z-index:1;
+  }
+}
+
+@media (min-width: 576px) {
+  .psd-right2:after {
+    border:3px solid grey;
+    background-color:#dc3545;
+    border-radius:20%;
+    content:"";
+    height:20px;
+    position:absolute;
+    right:-10px;
+    top:46px;
+    width:20px;
+    z-index:1;
+  }
+}
+
+@media (min-width: 576px) {
+  .psd-line:after {
+    content:"";
+    height:100%;
+    left:0;
+    margin:auto;
+    position:absolute;
+    right:0;
+    top:0;
+    width:2px;
+    background-color:#808080;
+  }
+}
+
+.index-howto-alt .howto-img {
+  width:170px;
+}
+
+.fa.fa-phone {
+  font-size:1px;
+}
+

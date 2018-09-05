@@ -1,0 +1,56 @@
+.fa.fa-sign-in {
+  margin-right:1px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  margin-right:10px;
+}
+
+body {
+  background-color:#e8e8e8;
+  min-height:100%;
+}
+
+#icons {
+  font-size:40px;
+}
+
+p {
+  font-size:18px;
+  text-align:center;
+}
+.odd{
+  background-color: lavenderblush;
+}
+.even{
+  background-color:gainsboro;
+}
+
+#add-students{
+  padding-top: 10%;
+}
+
+#addbtn{
+  padding-top: 50px;
+}
+thead{
+  background-color: darkcyan;
+  color: #e8e8e8;
+}
+
+
+
+#delete{
+ 
+  margin-right: -50px;
+}
+
+
+#btnadd{
+  margin-right: 3%;
+  margin-left: 3%;
+}
+#kss{
+  text-align: center;
+}
+
